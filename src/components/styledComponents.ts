@@ -119,11 +119,11 @@ export const SBikeCard = styled.div(
     padding: 2rem;
     box-shadow: 10px 24px 54px rgba(0, 0, 0, .06);
     border-radius: 20px;
-    transition: 600ms box-shadow ease-in, transform 300ms ease-out;
+    transition: 300ms box-shadow ease-in, transform 300ms ease-out;
 
     &:hover {
       box-shadow: none;
-      transform: translate(0, 1rem);
+      transform: scale(0.95);
     }
 
     .image {

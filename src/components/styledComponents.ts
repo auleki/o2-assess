@@ -68,6 +68,7 @@ export const SSearchBar = styled.div(
     border: 1px solid ${colors.borderLine};
     border-radius: 100px;
     margin-top: 2rem;
+    color: ${colors.grayText};
 
     div {
       align-items: center;
@@ -85,6 +86,36 @@ export const SSearchBar = styled.div(
       &:focus {
         outline: none;
       }
+    }
+  `
+)
+
+export const SIconButton = styled.button(
+  () => css`
+    background: ${colors.yellow};
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: none;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    transition: background 200ms ease-in, 
+      color 300ms ease-out;
+
+    &:hover {
+      background: ${colors.white};
+      cursor: pointer;
+      color: ${colors.blackText};
+      box-shadow: 4px 4px 35px rgba(0, 0, 0, .2);
+      transform: scale(1.1);
+    }
+
+    span {
+      font-weight: 800;
     }
   `
 )
@@ -107,10 +138,29 @@ export const SButton = styled.button(
 
 export const SFeaturedBikes = styled.div(
   () => css`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     margin-top: 5rem;
-    grid-gap: 2rem;
+    position: relative;
+
+    .bikes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+    }
+    
+    .navigation {      
+      width: 100%;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20rem;
+      padding-top: 3rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      
+    }
   `
 )
 
@@ -156,5 +206,72 @@ export const SFooter = styled.footer(
   () => css`
     padding: 2rem 0;
     margin-top: 2rem;
+  `
+)
+
+
+export const SBikeTypes = styled.div(
+  () => css`
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    .bike-types {
+      margin-top: 5rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  `
+)
+
+export const SBikeTypeCard = styled.div(
+  () => css`
+    text-align: center;
+    transition: color 200ms ease-in;
+
+    &:hover {
+      .bike-image {
+        border-color: ${colors.yellow};
+      }
+      color: ${colors.yellow};
+    }
+
+    .bike-type {
+      font-weight: 400;
+    }
+    
+    .bike-image {
+      padding: 1rem;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      margin-bottom: 1rem;
+      transition: border-color 200ms ease-in;
+      box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.06);
+    }
+  `
+)
+
+export const STopBike = styled.div(
+  () => css`
+    display: grid;
+    grid-template-columns: 1.8fr 3.2fr;
+
+    .bike-card {
+      display: flex;
+      justify-content: center;
+      /* border: 1px solid crimson; */
+      width: 100%;
+    }
+
+    .information {
+      margin-right: 15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      button {
+        
+      }
+    }
   `
 )

@@ -3,15 +3,17 @@ import { STopBike } from '../components/styledComponents'
 import TopBikeImg from "../assets/bike.png"
 import Button from '../components/Button'
 import BikeCard from '../components/BikeCard'
+import BlogImg from "../assets/blob.png"
 
 const TopBike = () => {
   return (
     <STopBike>
+      <img src={BlogImg} alt="blob" className="blob" />
       <div className="bike-card">
         <BikeCard />
       </div>
       <div className="information">
-        <h2 className="bike-name">Bike Name</h2>
+        <h2 className="bike-name">Hybrids</h2>
         <p className="paragraph">
           Dummy Text progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride
           in the solutions we deliver
@@ -20,6 +22,7 @@ const TopBike = () => {
           <Button>Learn More</Button>
         </div>
       </div>
+
     </STopBike>
   )
 }

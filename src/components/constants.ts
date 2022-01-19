@@ -1,4 +1,5 @@
 import * as BSIcon from 'react-icons/bs'
+import * as AIIcons from 'react-icons/ai'
 
 export const colors = {
   background: "#E5E5E5",
@@ -13,13 +14,17 @@ export const colors = {
 }
 
 export const metrics = {
-  linkText: "18px",
-  headerParagraph: "21px",
-  mainHeader: "48px",
+  linkText: "1.1rem",
+  headerParagraph: "1.2rem",
+  mainHeader: "2.7rem",
 }
 
 export const icons = {
   leftArrow: BSIcon.BsArrowLeft,
   rightArrow: BSIcon.BsArrowRight,
-  search: BSIcon.BsSearch
+  search: BSIcon.BsSearch,
+  menu: AIIcons.AiOutlineMenu,
+  close: AIIcons.AiOutlineCloseCircle,
+  upArrowFilled: BSIcon.BsFillArrowUpCircleFill,
+  
 }

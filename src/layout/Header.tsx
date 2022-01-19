@@ -1,8 +1,17 @@
 import React from 'react'
 import SearchBar from '../components/SearchBar'
 import { SHeader } from '../components/styledComponents'
+import Lottie from "react-lottie"
+import HeaderLottie from '../assets/Header-lottie.json'
+import TinyDotsImg from "../assets/tiny-dots.png"
 
 const Header = () => {
+  const options = {
+    loop: true,
+    autoplay: true,
+    animationData: HeaderLottie,
+  }
+
   return (
     <SHeader>
       <div className="left">
@@ -15,8 +24,9 @@ const Header = () => {
         <SearchBar />
       </div>
       <div className="right">
-        <h1>IMAGE</h1>
+        <Lottie options={options} height={420} width={420} />
       </div>
+      <img src={TinyDotsImg} alt="bg dots" className="bg-dots" />
     </SHeader>
   )
 }

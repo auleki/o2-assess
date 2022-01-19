@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SearchBar from '../components/SearchBar'
 import { SHeader } from '../components/styledComponents'
 import Lottie from "react-lottie"
 import HeaderLottie from '../assets/Header-lottie.json'
 import TinyDotsImg from "../assets/tiny-dots.png"
+import useWindowSize from "../components/hooks/useWindowSize";
 
 const Header = () => {
+  const [windowSize, setWindowSize] = useState<number>(0)
+
   const options = {
     loop: true,
     autoplay: true,
     animationData: HeaderLottie,
   }
+  const windowWidth = useWindowSize()
+
+  useEffect(() => {
+    setWindowSize(windowWidth)
+  }, [windowWidth])
+
+  const lottieSize = windowSize < 400 ? 300 : 420
 
   return (
     <SHeader>
@@ -24,7 +34,7 @@ const Header = () => {
         <SearchBar />
       </div>
       <div className="right">
-        <Lottie options={options} height={420} width={420} />
+        <Lottie options={options} height={lottieSize} width={lottieSize} />
       </div>
       <img src={TinyDotsImg} alt="bg dots" className="bg-dots" />
     </SHeader>

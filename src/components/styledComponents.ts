@@ -20,7 +20,7 @@ export const SHeader = styled.div(
     flex-wrap: wrap;
     position: relative;
     padding-top: 2rem;
-
+    /* z-index: 15; */
     .bg-dots {
       position: absolute;
       top: 0;
@@ -30,18 +30,19 @@ export const SHeader = styled.div(
     .header-title {
       font-size: ${metrics.mainHeader};
       color: ${colors.blackText};
+      margin-bottom: 2rem;
     }
 
     .header-paragraph {
       color: ${colors.grayText};
       line-height: 2rem;
-      margin-top: 2rem;
+      
       font-size: ${metrics.headerParagraph};
     }
 
     .left {
       margin-top: 5rem;
-      flex: .5 0 200px;
+      flex: .5 0 250px;
     }
 
     .right {
@@ -52,16 +53,35 @@ export const SHeader = styled.div(
     @media (max-width: 1155px) {
       display: flex;
       flex-direction: column-reverse;
-      /* margin-left: 5rem; */
+      padding: 0 1rem;
+      align-items: center;
 
-      .left {
+      
+      .left, .right {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        width: 100%;
+        margin: 0;
+      }
+      
+      .left {
+        width: 500px;
       }
     }
+
+    @media (max-width: 720px) {
+      .left {
+        width: 80%;
+      }
+    }
+
+     @media (max-width: 400px) { 
+       .header-title {
+         font-size: 1.7rem;
+         margin: 0;
+       }
+     }
   `
 )
 
@@ -131,7 +151,7 @@ export const SSearchBar = styled.div(
     border: 1px solid ${colors.borderLine};
     border-radius: 100px;
     margin-top: 2rem;
-    /* margin-left: 0; */
+    position: relative;
     color: ${colors.grayText};
 
     div {
@@ -149,6 +169,15 @@ export const SSearchBar = styled.div(
 
       &:focus {
         outline: none;
+      }
+    }
+
+    @media (max-width: 361px) {
+      margin-bottom: 5rem;
+      button {
+        position: absolute;
+        right: 3rem;
+        top: 5rem;
       }
     }
   `

@@ -13,11 +13,9 @@ const Footer = () => {
             </span>
             <span className='logo-text'>eBike</span>
           </div>
-          {/* <div className="info"> */}
           <p className="detail">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online
             for everyone</p>
           <p className="copyright">©eBike 2021. All rights reserved</p>
-          {/* </div> */}
         </div>
         <div className="footer-links">
           <div className="company-links">

@@ -1,6 +1,6 @@
 import React from 'react'
 import BikeTypeImg from '../assets/bike-type-1.png'
-import { BikeCardProps, BikeCardStyleProps } from '../global'
+import { BikeCardProps } from '../global'
 import { SBikeTypeCard } from './styledComponents'
 
 const BikeTypeCard = ({ grayed }: BikeCardProps) => {

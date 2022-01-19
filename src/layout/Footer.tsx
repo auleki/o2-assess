@@ -1,5 +1,6 @@
 import React from 'react'
 import { SFooter } from '../components/styledComponents'
+import TinyDotImg from "../assets/tiny-dots-3.png"
 
 const Footer = () => {
   return (
@@ -39,6 +40,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <img src={TinyDotImg} alt="" className="bg-dot" />
     </SFooter>
   )
 }

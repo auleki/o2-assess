@@ -171,12 +171,11 @@ export const SIconButton = styled.button<IconButtonProps>(
     display: flex;
     align-items: center;
     justify-content: center;
-    
     font-weight: 800;
     transition: background 200ms ease-in, 
       color 200ms ease-out;
-
-    &:hover {
+    
+      &:hover {
       background: ${colors.lightYellow};
       cursor: pointer;
       color: ${colors.blackText};
@@ -197,6 +196,7 @@ export const SButton = styled.button(
     background: linear-gradient(to bottom, ${colors.lightYellow}, ${colors.darkYellow});
     border: none;
     border-radius: 100px;
+    outline: none;
     font-family: inherit;
     cursor: pointer;
     transition: background 200ms ease-in;
@@ -220,10 +220,8 @@ export const OutlinedButton = styled(SButton)`
 
 export const SFeaturedBikes = styled.div(
   () => css`
-    /* margin-top: 5rem; */
     padding: 10rem 0 3rem 15rem;
     position: relative;
-    /* border: 1px solid yellow; */
     z-index: 10;
     background: ${colors.white};
 
@@ -231,6 +229,9 @@ export const SFeaturedBikes = styled.div(
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2rem;
+      /* background: ${colors.white}; */
+      padding-bottom: 1rem;
+      overflow-x: scroll;
     }
 
     .blob {
@@ -238,7 +239,6 @@ export const SFeaturedBikes = styled.div(
       left: -5%;
       opacity: .7;
       z-index: -5;
-      
     }
     
     .navigation {      
@@ -253,7 +253,18 @@ export const SFeaturedBikes = styled.div(
     .buttons {
       display: flex;
       gap: 1rem;
-      
+    }
+
+    @media (max-width: 920px) {
+      padding: 5rem 0rem;
+
+      .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid orange; */
+        padding: 2rem 0 0;
+      }
     }
   `
 )
@@ -282,6 +293,8 @@ export const SBikeCard = styled.div<BikeCardStyleProps>(
       padding-top: 1rem;
       display: flex;
       align-items: center;
+      /* border: 2px solid blue; */
+      margin: 0;
       justify-content: space-between;
     }
 
@@ -308,6 +321,14 @@ export const SFooter = styled.footer(
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    .bg-dot {
+      position: absolute;
+      bottom: -1rem;
+      left: -7rem;
+    }
 
     .container {
       /* outline: 2px solid crimson; */
@@ -452,6 +473,27 @@ export const STopBike = styled.div(
       font-size: 18px;
       line-height: 35px;
       color: ${colors.grayText};
+    }
+
+    @media (min-width: 880px) and (max-width: 1040px) {
+      padding-left: 5rem;
+    }
+
+    @media (max-width: 879px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+
+      .information {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .paragraph {
+        text-align: center;
+      }
     }
   `
 )

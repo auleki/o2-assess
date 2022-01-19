@@ -309,7 +309,17 @@ export const SFooter = styled.footer(
 
     .company-info {
       /* flex: 1 0 40%; */
+      display: flex;
+      flex-direction: column;
       width: 40%;
+      gap: 1rem;
+    }
+
+    .logo {
+      .circle {
+        height: 1rem;
+        width: 1rem;
+      }
     }
 
     /* .company-links {

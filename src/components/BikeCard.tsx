@@ -1,5 +1,5 @@
 import { SBikeCard } from './styledComponents'
-import BikeImg from "../assets/bike.png"
+// import BikeImg from "../assets/bike.png"
 import Button from './Button'
 import LottieImage from './LottieImage'
 import BikeLottie from "../assets/Rider-lottie.json"

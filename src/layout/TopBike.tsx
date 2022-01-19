@@ -1,6 +1,6 @@
-import React from 'react'
+// import React from 'react'
 import { STopBike } from '../components/styledComponents'
-import TopBikeImg from "../assets/bike.png"
+// import TopBikeImg from "../assets/bike.png"
 import Button from '../components/Button'
 import BikeCard from '../components/BikeCard'
 import BlogImg from "../assets/blob.png"

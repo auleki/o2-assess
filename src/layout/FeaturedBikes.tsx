@@ -1,6 +1,6 @@
-import React from 'react'
+// import React from 'react'
 import BikeCard from '../components/BikeCard'
-import Button from '../components/Button'
+// import Button from '../components/Button'
 import { icons } from '../components/constants'
 import IconButton from '../components/IconButton'
 import { SFeaturedBikes } from '../components/styledComponents'

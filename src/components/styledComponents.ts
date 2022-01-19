@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { BikeCardProps, BikeCardStyleProps, IconButtonProps } from '../global'
+import { BikeCardStyleProps, IconButtonProps } from '../global'
 import { colors, metrics } from './constants'
 
 export const SLayout = styled.div(
@@ -7,14 +7,9 @@ export const SLayout = styled.div(
     height: 100vh;
     font-family: "Mulish";
     /* padding-left: 15rem; */
-    backgrond: ${colors.background};
+    /* background: ${colors.background}; */
     overflow-x: hidden;
     position: relative;
-
-    @media (min-width: 1129px) and (max-width: 1300px) {
-      /* padding-left: 5rem; */
-      /* margin-right: 2rem; */
-    }
   `
 )
 
@@ -229,7 +224,6 @@ export const SFeaturedBikes = styled.div(
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2rem;
-      /* background: ${colors.white}; */
       padding-bottom: 1rem;
       overflow-x: scroll;
     }
@@ -332,23 +326,25 @@ export const SFooter = styled.footer(
 
     .container {
       /* outline: 2px solid crimson; */
+      padding: 0 5rem;
        display: flex;
        justify-content: space-between;
-       gap: 1rem;
     }
 
     .footer-links {
       display: flex;
-      /* flex: 1 0 40%; */
-      gap: 1rem;
+      gap: 3rem;
     }
 
     .company-info {
-      /* flex: 1 0 40%; */
       display: flex;
       flex-direction: column;
-      width: 40%;
+      width: 50%;
       gap: 1rem;
+    }
+
+    .detail {
+      line-height: 25px;
     }
 
     .logo {
@@ -378,16 +374,50 @@ export const SFooter = styled.footer(
       }
     }
 
-    /* .company-links {
-      flex: 1 0 30%
+    .company-links, .help-links {
+      h3 {
+        margin-bottom: 1rem;
+      }
+
+      .links .link {
+        margin-bottom: .5rem;
+      }
     }
 
     .help-links {
-      flex: 1 0 30%
-    } */
+      
+    }
 
     ul {
       list-style: none;
+    }
+
+    @media (max-width: 920px) {
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        /* border: 1px solid crimson; */
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .company-info {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 450px) {
+      padding: 4rem 0;
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+      }
     }
   `
 )
@@ -396,13 +426,22 @@ export const SFooter = styled.footer(
 export const SBikeTypes = styled.div(
   () => css`
     padding: 10rem 0 10rem 15rem;
-    /* border: 1px solid crimson; */
+
 
     .bike-types {
       margin-top: 5rem;
       display: grid;
       grid-gap: 1rem;
+      overflow-x: scroll;
+      background:#fff;
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (max-width: 920px) {
+      padding: 2rem 0 10rem;
+      .title {
+        text-align: center;
+      }
     }
   `
 )
@@ -430,7 +469,7 @@ export const SBikeTypeCard = styled.div<BikeCardStyleProps>(
       border: 2px solid transparent;
       margin-bottom: 1rem;
       transition: border-color 200ms ease-in;
-      box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.06);
+      box-shadow: 10px 14px 34px rgba(0, 0, 0, 0.06);
     }
   `
 )
@@ -537,7 +576,6 @@ export const SReviews = styled.div(
     }    
 
     .testimonials {
-      // TBS
       text-align: center;
       color: ${colors.white};
       width: 800px;
@@ -646,18 +684,12 @@ export const SReviews = styled.div(
       }
       .testimonials {
         width: 90vw;
-        padding: .5rem;
+        padding: 2rem .5rem;
         .client-review .review {
           margin-top: 1rem;
         }
       }
     }
-  `
-)
-
-export const SDesktopNavLinks = styled.div(
-  () => css`
-    
   `
 )
 
@@ -684,12 +716,12 @@ export const SScrollToTop = styled.div(
   `
 )
 
-export const SContainer = styled.div(
-  () => css`
-    padding-left: 15rem;
-    @media (min-width: 1129px) and (max-width: 1300px) {
-      padding-left: 5rem;
-      /* margin-right: 2rem; */
-    }
-  `
-)
+// export const SContainer = styled.div(
+//   () => css`
+//     padding-left: 15rem;
+//     @media (min-width: 1129px) and (max-width: 1300px) {
+//       padding-left: 5rem;
+//       /* margin-right: 2rem; */
+//     }
+//   `
+// )

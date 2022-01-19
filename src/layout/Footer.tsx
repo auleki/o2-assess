@@ -6,7 +6,12 @@ const Footer = () => {
     <SFooter>
       <div className="container">
         <div className="company-info">
-          <div className="logo">LOGO</div>
+          <div className="logo">
+            <span className="circle">
+              <span className="letter">B</span>
+            </span>
+            <span className='logo-text'>eBike</span>
+          </div>
           {/* <div className="info"> */}
           <p className="detail">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online
             for everyone</p>

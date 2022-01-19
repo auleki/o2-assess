@@ -295,7 +295,7 @@ export const SFooter = styled.footer(
     align-items: center;
 
     .container {
-      outline: 2px solid crimson;
+      /* outline: 2px solid crimson; */
        display: flex;
        justify-content: space-between;
        gap: 1rem;
@@ -316,9 +316,29 @@ export const SFooter = styled.footer(
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      letter-spacing: 1px;
+
+      .logo-text {
+        font-weight: 600;
+        font-size: 1.3rem;
+      }
+      
       .circle {
-        height: 1rem;
-        width: 1rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        background: ${colors.white};
+        border-radius: 50%;
+        color: ${colors.yellow};
+      }
+      .letter {
+        font-size: 1.5rem;
+        font-weight: 600;
       }
     }
 

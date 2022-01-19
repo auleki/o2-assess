@@ -3,13 +3,14 @@ import { OutlinedButton, STopBike } from '../components/styledComponents'
 // import TopBikeImg from "../assets/bike.png"
 import BikeCard from '../components/BikeCard'
 import BlogImg from "../assets/blob.png"
+import LottieImg from "../assets/Rider-lottie.json"
 
 const TopBike = () => {
   return (
     <STopBike>
       <img src={BlogImg} alt="blob" className="blob" />
       <div className="bike-card">
-        <BikeCard />
+        <BikeCard isLottie={true} imageLink={LottieImg} />
       </div>
       <div className="information">
         <h2 className="bike-name">Hybrids</h2>

@@ -8,4 +8,10 @@ export type IconButtonProps = {
 
 export type BikeCardProps = {
   grayed?: boolean
+  isLottie?: boolean
+  imageLink: any
+}
+
+export type BikeCardStyleProps = {
+  grayed?: boolean
 }

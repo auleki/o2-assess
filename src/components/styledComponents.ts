@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { BikeCardProps, IconButtonProps } from '../global'
+import { BikeCardProps, BikeCardStyleProps, IconButtonProps } from '../global'
 import { colors, metrics } from './constants'
 
 export const SLayout = styled.div(
@@ -258,7 +258,7 @@ export const SFeaturedBikes = styled.div(
   `
 )
 
-export const SBikeCard = styled.div<BikeCardProps>(
+export const SBikeCard = styled.div<BikeCardStyleProps>(
   ({ grayed }) => css`
     padding: 2rem;
     box-shadow: 10px 24px 54px rgba(0, 0, 0, .06);
@@ -386,7 +386,7 @@ export const SBikeTypes = styled.div(
   `
 )
 
-export const SBikeTypeCard = styled.div<BikeCardProps>(
+export const SBikeTypeCard = styled.div<BikeCardStyleProps>(
   ({ grayed }) => css`
     text-align: center;
     transition: color 200ms ease-in;

@@ -5,13 +5,17 @@ import LottieImage from './LottieImage'
 import BikeLottie from "../assets/Rider-lottie.json"
 import { BikeCardProps } from '../global'
 
-const BikeCard = ({ grayed }: BikeCardProps) => {
+const BikeCard = ({ grayed, isLottie, imageLink }: BikeCardProps) => {
   return (
     <SBikeCard grayed={grayed}>
       <h2 className="title">Universal eBike Kit</h2>
       <div className="image">
-        {/* <img src={BikeImg} alt="bike" /> */}
-        <LottieImage image={BikeLottie} />
+        {isLottie ? (
+          <LottieImage image={imageLink} />)
+          : (<img src={imageLink} alt="bike" />)
+        }
+
+
       </div>
       <div className="more-info">
         <div className="price-info">

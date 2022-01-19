@@ -36,7 +36,6 @@ export const SHeader = styled.div(
     .header-paragraph {
       color: ${colors.grayText};
       line-height: 2rem;
-      
       font-size: ${metrics.headerParagraph};
     }
 
@@ -104,6 +103,7 @@ export const SNavbar = styled.nav(
 
     .navlinks {
       display: flex;
+      z-index: 20;
       gap: 2rem;
       a {
         font-size: ${metrics.linkText};
@@ -115,6 +115,11 @@ export const SNavbar = styled.nav(
         }
       }
       
+    }
+
+    @media (max-width: 1059px) {
+      margin: 2rem;
+      padding: 0;
     }
 
     @media (max-width: 980px) {
@@ -254,7 +259,6 @@ export const SFeaturedBikes = styled.div(
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2rem;
       padding-bottom: 1rem;
-      overflow-x: scroll;
     }
 
     .blob {
@@ -280,7 +284,9 @@ export const SFeaturedBikes = styled.div(
 
     @media (max-width: 920px) {
       padding: 5rem 0rem;
-
+      .bikes {
+        overflow-x: scroll;
+      }
       .navigation {
         display: flex;
         justify-content: center;
@@ -456,18 +462,20 @@ export const SBikeTypes = styled.div(
   () => css`
     padding: 10rem 0 10rem 15rem;
 
-
     .bike-types {
       margin-top: 5rem;
       display: grid;
       grid-gap: 1rem;
-      overflow-x: scroll;
       background:#fff;
       grid-template-columns: repeat(5, 1fr);
     }
 
     @media (max-width: 920px) {
       padding: 2rem 0 10rem;
+
+      .bike-types {
+        overflow-x: scroll;
+      }
       .title {
         text-align: center;
       }
@@ -569,7 +577,6 @@ export const STopBike = styled.div(
 export const SReviews = styled.div(
   () => css`
     padding: 10rem 0;
-    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -582,7 +589,6 @@ export const SReviews = styled.div(
     .bg-dots {
       position: absolute;
       bottom: -3.5rem;
-      /* transform: rotateZ(90deg); */
       right: 2rem;
     }    
 
@@ -708,6 +714,8 @@ export const SReviews = styled.div(
     }
 
     @media (max-width: 850px) {
+      padding: 2rem 0;
+      
       .bg-dots {
         display: none;
       }

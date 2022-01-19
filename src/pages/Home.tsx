@@ -13,7 +13,7 @@ const Home = () => {
       <BikeTypes />
       <TopBike />
       <Reviews />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </Layout>
   )
 }

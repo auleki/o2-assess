@@ -30,9 +30,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-  // < NavLink to = "/" > Product</ >
-  //       <NavLink to="">Bike Type</NavLink>
-  //       <NavLink to="/about">About Us</NavLink>
-  //       <NavLink to="/testimonials">Testimonials</NavLink>
-  //       <NavLink to="/contacts">Contacts</NavLink>

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { BikeCardProps, IconButtonProps } from '../global'
 import { colors, metrics } from './constants'
 
 export const SLayout = styled.div(
@@ -158,24 +159,25 @@ export const SSearchBar = styled.div(
   `
 )
 
-export const SIconButton = styled.button(
-  () => css`
-    background: ${colors.yellow};
+export const SIconButton = styled.button<IconButtonProps>(
+  ({ inActive }) => css`
+    background: linear-gradient(to bottom, ${inActive ? colors.inActiveButton : colors.lightYellow}, ${inActive ? colors.inActiveButton : colors.darkYellow});
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
     border: none;
     outline: 0;
+    color: ${inActive ? colors.inActiveButtonText : 'inherit'};
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    
     font-weight: 800;
     transition: background 200ms ease-in, 
-      color 300ms ease-out;
+      color 200ms ease-out;
 
     &:hover {
-      background: ${colors.white};
+      background: ${colors.lightYellow};
       cursor: pointer;
       color: ${colors.blackText};
       box-shadow: 4px 4px 35px rgba(0, 0, 0, .2);
@@ -183,7 +185,8 @@ export const SIconButton = styled.button(
     }
 
     span {
-      font-weight: 800;
+      font-weight: 600;
+      font-size: 1.4rem;
     }
   `
 )
@@ -191,7 +194,7 @@ export const SIconButton = styled.button(
 export const SButton = styled.button(
   () => css`
     padding: .8rem 2.5rem;
-    background: ${colors.yellow};
+    background: linear-gradient(to bottom, ${colors.lightYellow}, ${colors.darkYellow});
     border: none;
     border-radius: 100px;
     font-family: inherit;
@@ -203,6 +206,17 @@ export const SButton = styled.button(
     }
   `
 )
+
+export const OutlinedButton = styled(SButton)`
+  background: ${colors.white};
+  border: 1px solid ${colors.yellow};
+  color: ${colors.yellow};
+  /* font-weight: 600; */
+
+  &:hover {
+    color: ${colors.inActiveDot};
+  }
+`
 
 export const SFeaturedBikes = styled.div(
   () => css`
@@ -244,14 +258,15 @@ export const SFeaturedBikes = styled.div(
   `
 )
 
-export const SBikeCard = styled.div(
-  () => css`
+export const SBikeCard = styled.div<BikeCardProps>(
+  ({ grayed }) => css`
     padding: 2rem;
     box-shadow: 10px 24px 54px rgba(0, 0, 0, .06);
     border-radius: 20px;
     background: ${colors.white};
     transition: 300ms box-shadow ease-in, transform 300ms ease-out;
     z-index: 5;
+    opacity: ${grayed ? 0.3 : 1};
 
     &:hover {
       box-shadow: none;
@@ -371,10 +386,11 @@ export const SBikeTypes = styled.div(
   `
 )
 
-export const SBikeTypeCard = styled.div(
-  () => css`
+export const SBikeTypeCard = styled.div<BikeCardProps>(
+  ({ grayed }) => css`
     text-align: center;
     transition: color 200ms ease-in;
+    opacity: ${grayed ? 0.3 : 1};
 
     &:hover {
       .bike-image {

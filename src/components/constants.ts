@@ -10,7 +10,9 @@ export const colors = {
   borderLine: "#C2CFE0",
   blackText: "#233348",
   grayText: "#7D7987",
-  inActiveDot: "#FFBE3B", // opacity of 0.3
+  inActiveDot: "#FFBE3B",
+  inActiveButton: "#FFE8B9",
+  inActiveButtonText: "#DAA53A"
 }
 
 export const metrics = {

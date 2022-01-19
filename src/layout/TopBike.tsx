@@ -1,5 +1,5 @@
 // import React from 'react'
-import { STopBike } from '../components/styledComponents'
+import { OutlinedButton, STopBike } from '../components/styledComponents'
 // import TopBikeImg from "../assets/bike.png"
 import Button from '../components/Button'
 import BikeCard from '../components/BikeCard'
@@ -19,7 +19,7 @@ const TopBike = () => {
           in the solutions we deliver
         </p>
         <div className="action">
-          <Button>Learn More</Button>
+          <OutlinedButton>Learn More</OutlinedButton>
         </div>
       </div>
 

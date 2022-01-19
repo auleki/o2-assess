@@ -13,12 +13,14 @@ const FeaturedBikes = () => {
       <div className="bikes">
         <BikeCard />
         <BikeCard />
-        <BikeCard />
+        <BikeCard grayed={true} />
       </div>
       <div className="navigation">
         <div className="buttons">
-          <IconButton><span><icons.leftArrow /></span></IconButton>
-          <IconButton><span><icons.rightArrow /></span></IconButton>
+          <IconButton inActive={true}>
+            <icons.leftArrow />
+          </IconButton>
+          <IconButton><icons.rightArrow /></IconButton>
         </div>
       </div>
     </SFeaturedBikes>

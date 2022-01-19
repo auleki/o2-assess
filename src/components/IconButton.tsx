@@ -1,10 +1,12 @@
 import React from 'react'
 import { SIconButton } from "./styledComponents";
 
-const IconButton = ({ children }: any) => {
+const IconButton = ({ children, inActive }: any) => {
   return (
-    <SIconButton>
-      {children}
+    <SIconButton inActive={inActive}>
+      <span>
+        {children}
+      </span>
     </SIconButton>
   )
 }

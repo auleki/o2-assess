@@ -11,7 +11,7 @@ const BikeTypes = () => {
         <BikeTypeCard />
         <BikeTypeCard />
         <BikeTypeCard />
-        <BikeTypeCard />
+        <BikeTypeCard grayed={true} />
       </div>
     </SBikeTypes>
   )

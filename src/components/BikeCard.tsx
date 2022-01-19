@@ -3,10 +3,11 @@ import { SBikeCard } from './styledComponents'
 import Button from './Button'
 import LottieImage from './LottieImage'
 import BikeLottie from "../assets/Rider-lottie.json"
+import { BikeCardProps } from '../global'
 
-const BikeCard = () => {
+const BikeCard = ({ grayed }: BikeCardProps) => {
   return (
-    <SBikeCard>
+    <SBikeCard grayed={grayed}>
       <h2 className="title">Universal eBike Kit</h2>
       <div className="image">
         {/* <img src={BikeImg} alt="bike" /> */}

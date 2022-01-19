@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { SNavbar } from '../components/styledComponents'
 import LogoLink from '../assets/o2-logo.svg'
-import useWindowSize from '../components/hooks/useWindowSize'
 import { navlinks } from '../dataBank'
 import { NavLink } from 'react-router-dom'
 import { icons } from '../components/constants'

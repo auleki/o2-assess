@@ -1,4 +1,3 @@
-import React from 'react'
 import { SReviews } from '../components/styledComponents'
 import CyclistImg from '../assets/review-one.png'
 import { icons } from '../components/constants'
@@ -18,14 +17,16 @@ const Reviews = () => {
             <img src={TinyDotImg2} alt="bg dot" className="bg-dots-two" />
             <div className="client-bio">
               <img src={CyclistImg} alt="testimonial" className='image' />
-              <h3 className="name">Edware Newgate</h3>
-              <p className="occupation">Pro Cyclist</p>
+              <div className="bio">
+                <h3 className="name">Edware Newgate</h3>
+                <p className="occupation">Pro Cyclist</p>
+              </div>
             </div>
             <div className="client-review">
               <p className="review">
                 Dummy Text patient engagement app and
                 web portal allow you to access information instantaneously (no tedeous form, long calls,
-                or administrative hassle) and securely”
+                or administrative hassle) and securely
               </p>
             </div>
           </div>

@@ -207,9 +207,9 @@ export const SButton = styled.button(
 export const SFeaturedBikes = styled.div(
   () => css`
     /* margin-top: 5rem; */
-    padding: 3rem 0 3rem 15rem;
+    padding: 10rem 0 3rem 15rem;
     position: relative;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     z-index: 10;
     background: ${colors.white};
 
@@ -221,7 +221,7 @@ export const SFeaturedBikes = styled.div(
 
     .blob {
       position: absolute;
-      left: -20%;
+      left: -5%;
       opacity: .7;
       z-index: -5;
       
@@ -287,10 +287,42 @@ export const SBikeCard = styled.div(
 export const SFooter = styled.footer(
   () => css`
     color: ${colors.white};
-    padding: 2rem 0 ;
-    z-index: 5;
+    padding: 4rem;
+    z-index: 10;
     background: ${colors.darkYellow};
-        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      outline: 2px solid crimson;
+       display: flex;
+       justify-content: space-between;
+       gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      /* flex: 1 0 40%; */
+      gap: 1rem;
+    }
+
+    .company-info {
+      /* flex: 1 0 40%; */
+      width: 40%;
+    }
+
+    /* .company-links {
+      flex: 1 0 30%
+    }
+
+    .help-links {
+      flex: 1 0 30%
+    } */
+
+    ul {
+      list-style: none;
+    }
   `
 )
 
@@ -298,7 +330,7 @@ export const SFooter = styled.footer(
 export const SBikeTypes = styled.div(
   () => css`
     padding: 10rem 0 10rem 15rem;
-    border: 1px solid crimson;
+    /* border: 1px solid crimson; */
 
     .bike-types {
       margin-top: 5rem;
@@ -341,7 +373,7 @@ export const STopBike = styled.div(
     color: ${colors.blackText};
     display: flex;
     gap: 2rem;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     position: relative;
     padding-left: 15rem;
 
@@ -380,24 +412,23 @@ export const STopBike = styled.div(
 
 export const SReviews = styled.div(
   () => css`
-    padding: 3rem 0;
-    border: 1px solid blue;
+    padding: 10rem 0;
+    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     align-items: center;
     background: ${colors.white};
-    z-index: -1;
+    z-index: 1;
+    overflow: hidden;
 
     .bg-dots {
       position: absolute;
       bottom: -3.5rem;
       /* transform: rotateZ(90deg); */
       right: 2rem;
-    }
-
-    
+    }    
 
     .title-box {
       display: flex;
@@ -415,16 +446,15 @@ export const SReviews = styled.div(
         background: ${colors.white};
         margin-left: 45%;
       }
-    }
-    
+    }    
 
     .testimonials {
       // TBS
       text-align: center;
       color: ${colors.white};
-      width: 60%;
+      width: 800px;
       background: ${colors.yellow};
-      padding: 2rem;
+      padding: 3rem;
       border-radius: 10px;
       position: relative;
       
@@ -436,34 +466,42 @@ export const SReviews = styled.div(
       }
     }
 
-    
-
     .testimonial {
       display: flex;
       justify-content: center;
-      
+      margin-right: 5rem;
+
       .bg-dots-two  {
         position: absolute;
         right: -.5rem;
         top: -4rem;
       }
+
       .client-bio {
         flex: 1 0 50%;
-        /* border: 1px solid blue; */
-        justify-self: flex-end;
+        margin-right: 1rem;
+        text-align: right;
         .image {
           border-radius: 50%;
+          height: 133px;
+          width: 133px;
           border: 2px solid ${colors.white};
+        }
+        .bio {
+          /* text-align: center; */
+        }
+        .occupation {
+          margin-right: 2rem;
         }
       }
 
       .client-review {
         flex: 1 0 50%;
+        /* margin-right: 5rem; */
+        display: flex;
+        align-items: center;
       }
     }
-
-
-
 
     .navigation {
       display: flex;
@@ -496,6 +534,36 @@ export const SReviews = styled.div(
         background: ${colors.yellow};
       }
     }
+
+    @media (min-width: 850px) (max-width: 1218px) {
+      .testimonial {
+        .client-review .review{
+          margin: 1rem 0 0 5rem;
+        }
+      }
+    }
+    
+    @media (max-width: 1218px) {
+      .testimonial {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+      }
+    }
+
+    @media (max-width: 850px) {
+      .bg-dots {
+        display: none;
+      }
+      .testimonials {
+        width: 90vw;
+        padding: .5rem;
+        .client-review .review {
+          margin-top: 1rem;
+        }
+      }
+    }
   `
 )
 
@@ -512,6 +580,7 @@ export const SScrollToTop = styled.div(
     display: inline;
     position: fixed;
     display: flex;
+    z-index: 8;
     justify-content: center;
     height: 3.4rem;
     width: 3.4rem;
